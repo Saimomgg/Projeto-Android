@@ -146,6 +146,7 @@ div.video{
 }
 
 .video > iframe{
+    background-color: #02390e;
     position: absolute; /* Dá algumas prorpiedades (top,left,right,bottom) */
     top: 5%;
     left: 5% ;
