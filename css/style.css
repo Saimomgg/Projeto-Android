@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+/* Cores com variaveis.
+#034159
+#025915
+#02735E
+#038C3E
+#0CF25D
+*/
+
+@font-face {
+    font-family: 'Android';
+    src: url(../fontes/idroid.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Black&family=Fira+Sans+Extra+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Langar&family=Lilita+One&family=Monomakh&family=Moon+Dance&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --cor1: #034159;
+    --cor2: #025915;
+    --cor3: #02735E;
+    --cor4: #038C3E;
+    --cor5: #0CF25D;
+
+    --font-padrao: Arial,georgia,sans-serif;
+    --font-baixada: 'Android', Arial;
+    --font-Externa: "Alfa Slab One", serif;
+}
+
+body {
+    background-color: var(--cor3);
+}
+header {
+    text-align: center;
+    color: var(--cor5);
+    background-image: linear-gradient(to right, #015701c3, var(--cor3));
+    padding: 20px;
+    margin: auto;
+    
+}
+header h1 {
+    text-transform: uppercase;
+    font-size: 3em;
+    max-width: 600px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.502);
+}
+
+header p {
+    margin: auto;
+    max-width: 600px;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.331);
+}
+
+nav {
+    background-image: linear-gradient(to right, #015701c3, var(--cor3));
+    text-decoration: none;
+    text-align: right;
+    margin: auto;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.356);
+    padding: 0px 30px;
+}
+nav a {
+    padding: 0px 11px;
+    text-decoration: none;
+    color: #0CF25D;
+    font-size: 1.2em;
+    font-weight: bolder;
+    max-width: 600px;
+    min-width: 300px;
+    cursor: grab;
+}
+nav a:hover{
+    color: rgb(0, 255, 255);
+    background-color: #000201;
+    transition-duration: 0.9s;
+    border-radius: 10px;
+    font-size: 21px;
+}
+main {
+    background-color: #ffffff;
+    max-width: 800px;
+    min-width: 350px;
+    margin: auto;
+    box-shadow: 0px 2px 0px 2px rgba(0, 0, 0, 0.16);
+    border-radius: 0px 0px 10px 10px;
+}
+main article {
+    margin: 0px 10px;
+}
+main  h1 {
+    font-family: var(--font-baixada);
+    text-align: center;
+    color: #025915;
+    font-size: 1.9em;
+}
+main h2 {
+    font-family: var(--font-padrao);
+    text-indent: 20px;
+    text-transform: uppercase;
+    color: #6ef28a;
+    background-image: linear-gradient(to right, #02390e, transparent);
+}
+
+main  aside  h3 {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    background-color: #17341db7;
+    box-shadow: 0px 2px 2px black;
+
+}
+main p {
+    line-height: 26px;
+    text-indent: 20px;
+    text-align: justify;
+    font-size: 20px;
+    font-weight: normal;
+    font-family: var(--font-padrao);
+}
+
+main .pequeno{
+    display: block;
+    margin: auto;
+    max-width: 350px;
+    font-weight: normal;
+}
+
+div.video{
+    margin: 0px -10px 30px -10px;
+    padding: 30px;
+    padding-bottom: 53.3%;
+
+    position: relative; /* Deixar a imagem no canto */
+}
+
+.video > iframe{
+    position: absolute; /* Dá algumas prorpiedades (top,left,right,bottom) */
+    top: 5%;
+    left: 5% ;
+    width: 90%;
+    height: 90%;
+}
+
+main strong{
+    color: #038C3E;
+    padding: 20px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.473);
+}
+
+.link{
+    text-decoration: none;
+    text-shadow: 0.5px 0.5px 0.5px black;
+    color: #3e841c;
+    text-transform: uppercase;
+}
+article .link:hover{
+    color: #000000;
+    background-color: #0CF25D;
+    padding: 5px;
+    transition-duration: 0.9s;
+    font-size: 20px;
+    border-radius: 4px 4px 4px 4px;
+    text-decoration: underline;
+}
+
+article .link:active{
+    color: rgba(125, 10, 10, 0.763);
+}
+article .link::after{
+    content: ' 🔗';
+    text-transform: none;
+}
+
+aside {
+    background-color: #349a48b7;
+}
+
+aside > ul {
+    margin: 15px;
+    padding: 20px;
+    line-height: 45px;
+    text-decoration: none;
+    cursor: crosshair;
+    font-weight: bolder;
+    background-color: #17341db7;
+    color: white;
+    columns: 2; /* Cria colunas */
+    border-radius: 20px;
+    list-style-position: inside; /* Coloca as bolinhas da lista para dentro. */
+    list-style-type: '\2714\00A0\00A0'; /* Tira as bolinhas por outra coisa\2714 é o codigo do emoji, 00A0 é quantos espaços vai pular, colocando denovo ele pula denovo */
+}
+
+aside .aprender{
+    font-family: var(--font-baixada);
+    font-size: 25px;
+    background-image: linear-gradient(to right, #02390e,transparent);
+}
+
+aside .paragrafo1{
+    font-weight: normal;
+    font-family: var(--font-padrao);
+    line-height: 30px;
+}
+
+aside .paragrafo2{
+    font-size: 25px;
+    line-height: 30px;
+}
+aside .link{
+    color: #023e1c;
+}
+
+footer .rodape{
+    text-align: center;
+    font-family: var(--font-padrao);
+    text-transform: uppercase;
+    color: #0CF25D;
+    font-size: 1.2em;
+    padding: 6px 6px 6px 6px; 
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.45);
+}
+
+img {
+    width: 100%;
+}
